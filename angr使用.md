@@ -45,3 +45,4 @@ False
 True
 ```
 # 工厂 factory
+提供了经常使用的功能project.factory
