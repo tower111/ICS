@@ -44,3 +44,4 @@ False
 >>> proj.loader.main_object.pic  # sample query: is this binary position-independent?
 True
 ```
+# 工厂 factory
