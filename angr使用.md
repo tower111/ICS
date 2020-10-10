@@ -73,7 +73,7 @@ factory提供了一些方便的构造函数。常用的操作project.factory
 >>> block.instruction_addrs             # what are the addresses of the instructions?
 [0x401670, 0x401672, 0x401675, 0x401676, 0x401679, 0x40167d, 0x40167e, 0x40167f, 0x401686, 0x40168d, 0x401694]
 ```
-还可以把块代码转化为其他表示形式(另一种类)
+还可以把块代码转化为其他表示形式(另一种类)，待补充：capstone结构和VEX IRSB结构
 
 ``` python
 >>> block.capstone                       # capstone disassembly
