@@ -98,4 +98,8 @@ SimState包含程序的内存，寄存器，文件系统信息，可以通过执
 >>> state.mem[proj.entry].int.resolved  # interpret the memory at the entry point as a C int
 <BV32 0x8949ed31>
 ```
-获取到的是位向量，不是python的int是另一种数据类型，每个位向量都有一个.length属性
+获取到的是位向量，不是python的int是另一种数据类型，每个位向量都有一个.length属性。下面是python的int和bitvector的转化
+>>> bv = state.solver.BVV(0x1234, 32)       # create a 32-bit-wide bitvector with value 0x1234
+<BV32 0x1234>                               # BVV stands for bitvector value
+>>> state.solver.eval(bv)                # convert to python int
+0x1234
