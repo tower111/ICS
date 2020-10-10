@@ -5,8 +5,12 @@ renderNumberedHeading: true
 grammar_cjkRuby: true
 ---
 
+
 ## 介绍
 解决ICS逆向问题，为ICS二进制文件提出结构化的方法考虑ICS特定领域的特征，自动逆向引擎
+
+论文中文翻译
+
 
 ### 目的
 逆向编译后的CODESYS
