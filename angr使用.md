@@ -98,3 +98,4 @@ SimState包含程序的内存，寄存器，文件系统信息，可以通过执
 >>> state.mem[proj.entry].int.resolved  # interpret the memory at the entry point as a C int
 <BV32 0x8949ed31>
 ```
+获取到的是位向量，不是python的int是另一种数据类型，每个位向量都有一个.length属性
