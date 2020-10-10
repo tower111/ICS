@@ -106,3 +106,13 @@ SimState包含程序的内存，寄存器，文件系统信息，可以通过执
 >>> state.solver.eval(bv)                # convert to python int
 0x1234
 ```
+
+``` python
+>>> state.regs.rsi = state.solver.BVV(3, 64)
+>>> state.regs.rsi
+<BV64 0x3>
+
+>>> state.mem[0x1000].long = 4
+>>> state.mem[0x1000].long.resolved
+<BV64 0x4>
+```
