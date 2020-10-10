@@ -50,7 +50,7 @@ factory提供了一些方便的构造函数。常用的操作project.factory
 ## block
 用 proj.factory.block()从一个地址上提取基本代码块，angr以代码块为单位分析代码。将会返回一个block对象，该对象包含很多信息
 
-示例中给出了得出一个基本块的反汇编，指令条数，每条指令的地址
+示例中给出了得出一个基本块的反汇编，指令条数，每条指令的地址。
 ``` python
 >>> block = proj.factory.block(proj.entry) # lift a block of code from the program's entry point
 <Block for 0x401670, 42 bytes>
@@ -73,3 +73,12 @@ factory提供了一些方便的构造函数。常用的操作project.factory
 >>> block.instruction_addrs             # what are the addresses of the instructions?
 [0x401670, 0x401672, 0x401675, 0x401676, 0x401679, 0x40167d, 0x40167e, 0x40167f, 0x401686, 0x40168d, 0x401694]
 ```
+还可以把块代码转化为其他表示形式(另一种类)
+
+``` python
+>>> block.capstone                       # capstone disassembly
+<CapstoneBlock for 0x401670>
+>>> block.vex                            # VEX IRSB (that's a python internal address, not a program address)
+<pyvex.block.IRSB at 0x7706330>
+```
+
