@@ -88,4 +88,4 @@ factory提供了一些方便的构造函数。常用的操作project.factory
 >>> state = proj.factory.entry_state()
 <SimState @ 0x401670>
 ```
-SimState包含
+SimState包含程序的内存，寄存器，文件系统信息，可以通过执行更改的实时数据
