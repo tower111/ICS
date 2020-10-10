@@ -107,6 +107,7 @@ SimState包含程序的内存，寄存器，文件系统信息，可以通过执
 0x1234
 ```
 
+可以用下面的方式把数据放到内存或者寄存器
 ``` python
 >>> state.regs.rsi = state.solver.BVV(3, 64)
 >>> state.regs.rsi
