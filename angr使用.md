@@ -45,4 +45,4 @@ False
 True
 ```
 # 工厂 factory
-factory 提供了经常使用的功能project.factory
+factory提供了一些方便的构造函数。常用的操作project.factory
