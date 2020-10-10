@@ -82,9 +82,10 @@ factory提供了一些方便的构造函数。常用的操作project.factory
 <pyvex.block.IRSB at 0x7706330>
 ```
 ## states
-代表程序的初始化镜像，获取到的是特定对象的工作模拟程序状态的一个。
+代表程序的初始化镜像，获取到的是特定对象的工作模拟程序状态的一个。下面获取一个状态
 
 ``` python
 >>> state = proj.factory.entry_state()
 <SimState @ 0x401670>
 ```
+SimState包含
