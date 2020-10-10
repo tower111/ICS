@@ -48,3 +48,26 @@ True
 factory提供了一些方便的构造函数。常用的操作project.factory
 
 ## block
+
+``` python
+>>> block = proj.factory.block(proj.entry) # lift a block of code from the program's entry point
+<Block for 0x401670, 42 bytes>
+
+>>> block.pp()                          # pretty-print a disassembly to stdout
+0x401670:       xor     ebp, ebp
+0x401672:       mov     r9, rdx
+0x401675:       pop     rsi
+0x401676:       mov     rdx, rsp
+0x401679:       and     rsp, 0xfffffffffffffff0
+0x40167d:       push    rax
+0x40167e:       push    rsp
+0x40167f:       lea     r8, [rip + 0x2e2a]
+0x401686:       lea     rcx, [rip + 0x2db3]
+0x40168d:       lea     rdi, [rip - 0xd4]
+0x401694:       call    qword ptr [rip + 0x205866]
+
+>>> block.instructions                  # how many instructions are there?
+0xb
+>>> block.instruction_addrs             # what are the addresses of the instructions?
+[0x401670, 0x401672, 0x401675, 0x401676, 0x401679, 0x40167d, 0x40167e, 0x40167f, 0x401686, 0x40168d, 0x401694]
+```
