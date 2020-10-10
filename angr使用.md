@@ -50,6 +50,7 @@ factory提供了一些方便的构造函数。常用的操作project.factory
 ## block
 用 proj.factory.block()从一个地址上提取基本代码块，angr以代码块为单位分析代码。将会返回一个block对象，该对象包含很多信息
 
+示例中给出了得出一个基本块的反汇编，指令条数，每条指令的地址
 ``` python
 >>> block = proj.factory.block(proj.entry) # lift a block of code from the program's entry point
 <Block for 0x401670, 42 bytes>
