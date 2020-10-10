@@ -10,7 +10,7 @@ grammar_cjkRuby: true
 
 # 基本特性
 
-archinfo.arch提供了有关其运行cpu的很多信息相关介绍[https://github.com/angr/archinfo/blob/master/archinfo/arch_amd64.py](https://github.com/angr/archinfo/blob/master/archinfo/arch_amd64.py)
+archinfo.arch提供了有关其运行cpu的很多信息相关代码在[https://github.com/angr/archinfo/blob/master/archinfo/arch_amd64.py](https://github.com/angr/archinfo/blob/master/archinfo/arch_amd64.py)
 ``` python
 >>> proj.arch
 <Arch AMD64 (LE)>
