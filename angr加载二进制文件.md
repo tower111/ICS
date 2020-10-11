@@ -32,7 +32,7 @@ cle加载器(cle.Loader)i表示整个已加载二进制对象的组合，它们�
  <ExternObject Object cle##externs, maps [0x4000000:0x4008000]>,
  <KernelObject Object cle##kernel, maps [0x5000000:0x5008000]>]
 
-# This is the "main" object, the one that you directly specified when loading the project
+# This is the "main" object, the one that you directly specified when loading the project 。main是指定要加载的文件
 >>> proj.loader.main_object
 <ELF Object fauxware, maps [0x400000:0x60105f]>
 
