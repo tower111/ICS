@@ -129,7 +129,7 @@ SimState包含程序的内存，寄存器，文件系统信息，可以通过执
 ```
 ## Simulation Managers 仿真管理器
 
-对先前创建的状态进行操作
+对先前创建的状态进行操作，创建仿真管理器
 
 ``` python
 >>> simgr = proj.factory.simulation_manager(state)
