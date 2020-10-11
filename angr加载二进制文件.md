@@ -44,7 +44,7 @@ cle加载器(cle.Loader)i表示整个已加载二进制对象的组合，它们�
 
 # Here's all the objects that were loaded from ELF files
 # If this were a windows program we'd use all_pe_objects!
->>> proj.loader.all_elf_objects
+>>> proj.loader.all_elf_objects  #加载的所有elf文件，如果是windows把elf换成PE
 [<ELF Object fauxware, maps [0x400000:0x60105f]>,
  <ELF Object libc-2.23.so, maps [0x1000000:0x13c999f]>,
  <ELF Object ld-2.23.so, maps [0x2000000:0x2227167]>]
