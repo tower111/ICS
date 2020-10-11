@@ -117,3 +117,6 @@ SimState包含程序的内存，寄存器，文件系统信息，可以通过执
 >>> state.mem[0x1000].long.resolved
 <BV64 0x4>
 ```
+- 上面代码中的long可以换成更多表达`<type> (common values: char, short, int, long, size_t, uint8_t, uint16_t...)`
+- mem可以存储位向量和python的int
+- 使用.resolve可以得到位向量
