@@ -133,7 +133,7 @@ loader.find_symbol可以返回一个符号对象（参数可以是符号名字�
 >>> strcmp.relative_addr
 0x89cd0
 ```
-
+符号表本身
 ``` python
 >>> strcmp.is_export
 True
