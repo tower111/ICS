@@ -74,7 +74,7 @@ cle加载器(cle.Loader)i表示整个已加载二进制对象的组合，它们�
 (0x400000, 0x60105f)
 
 # Retrieve this ELF's segments and sections
->>> obj.segments  #检索此ELF的段和节
+>>> obj.segments  #检索此ELF的段和节（内存大小，文件大小，虚拟地址，标志，偏移）
 <Regions: [<ELFSegment memsize=0xa74, filesize=0xa74, vaddr=0x400000, flags=0x5, offset=0x0>,
            <ELFSegment memsize=0x238, filesize=0x228, vaddr=0x600e28, flags=0x6, offset=0xe28>]>
 >>> obj.sections
