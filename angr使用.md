@@ -122,7 +122,7 @@ SimState包含程序的内存，寄存器，文件系统信息，可以通过执
 - 使用.resolve可以得到位向量，.concrete可以得到python int
  
  
-
+还有一些未初始化的值，64位位向量但是不包含数值，又叫符号变量
 ``` python
 >>> state.regs.rdi
 <BV64 reg_48_11_64{UNINITIALIZED}>
