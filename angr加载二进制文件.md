@@ -173,3 +173,5 @@ A relocation's corresponding import symbol can be accessed as .symbol. The addre
 
 使用angr.Project加载某些东西，并且想将一个选项传递个Project隐式创建的cle.Loader实例。Project的参数将会完成这一工作详细内容见[http://angr.io/api-doc/cle.html](http://angr.io/api-doc/cle.html)
 
+- auto_load_libs 默认启用，自动解析共享库
+- except_missing_libs
