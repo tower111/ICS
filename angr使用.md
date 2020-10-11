@@ -168,3 +168,25 @@ angr提供一些内置的分析提供一些信息
  proj.analyses.CFGEmulated          proj.analyses.LoopFinder           proj.analyses.VSA_DDG               
  proj.analyses.CFGFast              proj.analyses.Reassembler
 ```
+详细说明见[http://angr.io/api-doc/angr.html?highlight=cfg#module-angr.analysis](http://angr.io/api-doc/angr.html?highlight=cfg#module-angr.analysis)
+下面生成cfg图
+
+``` python
+# Originally, when we loaded this binary it also loaded all its dependencies into the same virtual address  space
+# This is undesirable for most analysis.
+>>> proj = angr.Project('/bin/true', auto_load_libs=False)
+>>> cfg = proj.analyses.CFGFast()
+<CFGFast Analysis Result at 0x2d85130>
+
+# cfg.graph is a networkx DiGraph full of CFGNode instances
+# You should go look up the networkx APIs to learn how to use this!
+>>> cfg.graph
+<networkx.classes.digraph.DiGraph at 0x2da43a0>
+>>> len(cfg.graph.nodes())
+951
+
+# To get the CFGNode for a given address, use cfg.get_any_node
+>>> entry_node = cfg.get_any_node(proj.entry)
+>>> len(list(cfg.graph.successors(entry_node)))
+2
+```
