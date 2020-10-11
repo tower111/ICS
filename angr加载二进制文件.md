@@ -16,3 +16,4 @@ angr的加载模块叫CLE。
 >>> proj.loader
 <Loaded fauxware, maps [0x400000:0x5008000]>
 ```
+cle加载器(cle.Loader)i表示整个已加载二进制对象的组合，它们被加载并映射到单个内存空间。该加载器可以处理其文件类型（cle.Backend）
