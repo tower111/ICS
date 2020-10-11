@@ -7,7 +7,8 @@ grammar_cjkRuby: true
 
 ## 加载器
 
-angr的加载模块叫CLE
+angr的加载模块叫CLE。
+
 加载一个程序更深入的查看加载交互
 ``` python
 >>> import angr, monkeyhex
