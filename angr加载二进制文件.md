@@ -58,6 +58,6 @@ cle加载器(cle.Loader)i表示整个已加载二进制对象的组合，它们�
 <KernelObject Object cle##kernel, maps [0x5000000:0x5008000]>
 
 # Finally, you can to get a reference to an object given an address in it
->>> proj.loader.find_object_containing(0x400000)
+>>> proj.loader.find_object_containing(0x400000) #可以获得其中对给定地址对象的引用
 <ELF Object fauxware, maps [0x400000:0x60105f]>
 ```
