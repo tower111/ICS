@@ -104,3 +104,4 @@ cle加载器(cle.Loader)i表示整个已加载二进制对象的组合，它们�
 0x400000
 ```
 
+## Symbols and Relocations 符号和迁移
