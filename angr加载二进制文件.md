@@ -108,3 +108,9 @@ cle加载器(cle.Loader)i表示整个已加载二进制对象的组合，它们�
 
 使用CLE的使用能用符号
 loader.find_symbol可以返回一个符号对象（参数可以是符号名字或者地址）
+
+``` python
+>>> strcmp = proj.loader.find_symbol('strcmp')
+>>> strcmp
+<Symbol "strcmp" in libc.so.6 at 0x1089cd0>
+```
