@@ -154,3 +154,4 @@ SimState包含程序的内存，寄存器，文件系统信息，可以通过执
 >>> state.regs.rip                           # still the same!
 <BV64 0x401670>
 ```
+## 分析
