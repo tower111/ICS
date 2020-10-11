@@ -152,7 +152,7 @@ True
 >>> main_strcmp.resolvedby #导入符号的来源
 <Symbol "strcmp" in libc.so.6 at 0x1089cd0>
 ```
-不是太理解它的重定位是什么意思
+不是太理解它的重定位是什么意思 说明文档[https://docs.angr.io/core-concepts/loading](https://docs.angr.io/core-concepts/loading)
 
 ``` python
 # Relocations don't have a good pretty-printing, so those addresses are python-internal, unrelated to our program
