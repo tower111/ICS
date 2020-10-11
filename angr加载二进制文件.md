@@ -133,3 +133,22 @@ loader.find_symbol可以返回一个符号对象（参数可以是符号名字�
 >>> strcmp.relative_addr
 0x89cd0
 ```
+
+``` python
+>>> strcmp.is_export
+True
+>>> strcmp.is_import
+False
+
+# On Loader, the method is find_symbol because it performs a search operation to find the symbol.
+# On an individual object, the method is get_symbol because there can only be one symbol with a given name.
+>>> main_strcmp = proj.loader.main_object.get_symbol('strcmp')
+>>> main_strcmp
+<Symbol "strcmp" in fauxware (import)>
+>>> main_strcmp.is_export
+False
+>>> main_strcmp.is_import
+True
+>>> main_strcmp.resolvedby
+<Symbol "strcmp" in libc.so.6 at 0x1089cd0>
+```
