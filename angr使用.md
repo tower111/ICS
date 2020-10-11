@@ -171,7 +171,7 @@ angr提供一些内置的分析提供一些信息
 详细说明见[http://angr.io/api-doc/angr.html?highlight=cfg#module-angr.analysis](http://angr.io/api-doc/angr.html?highlight=cfg#module-angr.analysis)
 下面生成cfg图，这是一个networkx的图（具体使用说明见python的networks库）
 
-从一个地址生成cfg图
+从一个地址生成cfg图，也可以从一个project获取cfg图
 
 ``` python
 # Originally, when we loaded this binary it also loaded all its dependencies into the same virtual address  space
