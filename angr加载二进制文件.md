@@ -149,7 +149,7 @@ False
 False
 >>> main_strcmp.is_import
 True
->>> main_strcmp.resolvedby
+>>> main_strcmp.resolvedby #导入符号的来源
 <Symbol "strcmp" in libc.so.6 at 0x1089cd0>
 ```
 
