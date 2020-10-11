@@ -190,4 +190,12 @@ main_opts和lib_opts会有下面的选项
 - backend 使用哪个后端加载器
 - base_addr 加载基地址
 - entry_point 程序入口点
-- 
+- arch 架构的名字
+
+``` python
+>>> angr.Project('examples/fauxware/fauxware', main_opts={'backend': 'blob', 'arch': 'i386'}, lib_opts={'libc.so.6': {'backend': 'elf'}})
+<Project examples/fauxware/fauxware>
+```
+对于backend有这样一个表
+
+![enter description here](./images/1602407081281.png)
