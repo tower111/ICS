@@ -50,7 +50,7 @@ cle加载器(cle.Loader)i表示整个已加载二进制对象的组合，它们�
  <ELF Object ld-2.23.so, maps [0x2000000:0x2227167]>]
 
 # Here's the "externs object", which we use to provide addresses for unresolved imports and angr internals
->>> proj.loader.extern_object
+>>> proj.loader.extern_object #externs object 对未解析的导入和angr自身提供的地址
 <ExternObject Object cle##externs, maps [0x4000000:0x4008000]>
 
 # This object is used to provide addresses for emulated syscalls
