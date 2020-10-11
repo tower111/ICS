@@ -54,7 +54,7 @@ cle加载器(cle.Loader)i表示整个已加载二进制对象的组合，它们�
 <ExternObject Object cle##externs, maps [0x4000000:0x4008000]>
 
 # This object is used to provide addresses for emulated syscalls
->>> proj.loader.kernel_object
+>>> proj.loader.kernel_object  # 为模拟系统调用提供的地址
 <KernelObject Object cle##kernel, maps [0x5000000:0x5008000]>
 
 # Finally, you can to get a reference to an object given an address in it
