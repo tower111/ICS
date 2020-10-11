@@ -127,3 +127,5 @@ SimState包含程序的内存，寄存器，文件系统信息，可以通过执
 >>> state.regs.rdi
 <BV64 reg_48_11_64{UNINITIALIZED}>
 ```
+## Simulation Managers 模拟管理
+
