@@ -183,4 +183,6 @@ A relocation's corresponding import symbol can be accessed as .symbol. The addre
 -  ld_path 字符串或或字符串列表，该列表将用作共享库的附加搜索路径，下面几个目录是默认的：加载程序相同的目录，当前工作目录，系统库
 
 
+二进制文件操作
 
+main_opts和lib_opts
