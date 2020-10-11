@@ -119,4 +119,11 @@ SimState包含程序的内存，寄存器，文件系统信息，可以通过执
 ```
 - 上面代码中的long可以换成更多表达`<type> (common values: char, short, int, long, size_t, uint8_t, uint16_t...)`
 - mem可以存储位向量和python的int
-- 使用.resolve可以得到位向量
+- 使用.resolve可以得到位向量，.concrete可以得到python int
+ 
+ 
+
+``` python
+>>> state.regs.rdi
+<BV64 reg_48_11_64{UNINITIALIZED}>
+```
