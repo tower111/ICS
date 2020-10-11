@@ -91,7 +91,7 @@ cle加载器(cle.Loader)i表示整个已加载二进制对象的组合，它们�
 <.text | offset 0x580, vaddr 0x400580, size 0x338>
 
 # Get the address of the PLT stub for a symbol
->>> addr = obj.plt['strcmp']
+>>> addr = obj.plt['strcmp']# 得到一个符号的plt表项
 >>> addr
 0x400550
 >>> obj.reverse_plt[addr]
