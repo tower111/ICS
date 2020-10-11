@@ -1,5 +1,5 @@
 ---
-title: angr加载二进制文件
+title: angr-2加载二进制文件
 tags: 新建,模板,小书匠
 renderNumberedHeading: true
 grammar_cjkRuby: true
@@ -7,6 +7,7 @@ grammar_cjkRuby: true
 
 ## 加载器
 
+加载一个程序更深入的查看
 ``` python
 >>> import angr, monkeyhex
 >>> proj = angr.Project('examples/fauxware/fauxware')
