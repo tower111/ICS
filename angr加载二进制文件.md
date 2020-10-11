@@ -169,3 +169,7 @@ A relocation's corresponding import symbol can be accessed as .symbol. The addre
  '_rtld_global': <cle.backends.elf.relocation.amd64.R_X86_64_GLOB_DAT at 0x7ff5c5fce4e0>,
  '_rtld_global_ro': <cle.backends.elf.relocation.amd64.R_X86_64_GLOB_DAT at 0x7ff5c5fcea20>}
 ```
+# 加载选项
+
+使用angr.Project加载某些东西，并且想将一个选项传递个Project隐式创建的cle.Loader实例。Project的参数将会完成这一工作详细内容见[http://angr.io/api-doc/cle.html](http://angr.io/api-doc/cle.html)
+
