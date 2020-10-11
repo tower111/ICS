@@ -83,6 +83,7 @@ cle加载器(cle.Loader)i表示整个已加载二进制对象的组合，它们�
            <.note.ABI-tag | offset 0x254, vaddr 0x400254, size 0x20>,
             ...etc
 
+#通过地址查看段和节
 # You can get an individual segment or section by an address it contains:
 >>> obj.find_segment_containing(obj.entry)
 <ELFSegment memsize=0xa74, filesize=0xa74, vaddr=0x400000, flags=0x5, offset=0x0>
