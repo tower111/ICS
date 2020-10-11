@@ -155,3 +155,16 @@ SimState包含程序的内存，寄存器，文件系统信息，可以通过执
 <BV64 0x401670>
 ```
 # 分析
+angr提供一些内置的分析提供一些信息
+
+``` python
+>>> proj.analyses.            # Press TAB here in ipython to get an autocomplete-listing of everything:
+ proj.analyses.BackwardSlice        proj.analyses.CongruencyCheck      proj.analyses.reload_analyses       
+ proj.analyses.BinaryOptimizer      proj.analyses.DDG                  proj.analyses.StaticHooker          
+ proj.analyses.BinDiff              proj.analyses.DFG                  proj.analyses.VariableRecovery      
+ proj.analyses.BoyScout             proj.analyses.Disassembly          proj.analyses.VariableRecoveryFast  
+ proj.analyses.CDG                  proj.analyses.GirlScout            proj.analyses.Veritesting           
+ proj.analyses.CFG                  proj.analyses.Identifier           proj.analyses.VFG                   
+ proj.analyses.CFGEmulated          proj.analyses.LoopFinder           proj.analyses.VSA_DDG               
+ proj.analyses.CFGFast              proj.analyses.Reassembler
+```
