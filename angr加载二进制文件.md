@@ -188,3 +188,6 @@ A relocation's corresponding import symbol can be accessed as .symbol. The addre
 main_opts和lib_opts会有下面的选项
 
 - backend 使用哪个后端加载器
+- base_addr 加载基地址
+- entry_point 程序入口点
+- 
