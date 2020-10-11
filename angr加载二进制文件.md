@@ -61,3 +61,45 @@ cle加载器(cle.Loader)i表示整个已加载二进制对象的组合，它们�
 >>> proj.loader.find_object_containing(0x400000) #可以获得其中对给定地址对象的引用（给一个地址找到所在的对象）
 <ELF Object fauxware, maps [0x400000:0x60105f]>
 ```
+可以直接交互从它们提取元数据（是一些静态时候的数据）
+
+``` python
+>>> obj = proj.loader.main_object
+
+# The entry point of the object
+>>> obj.entry
+0x400580
+
+>>> obj.min_addr, obj.max_addr
+(0x400000, 0x60105f)
+
+# Retrieve this ELF's segments and sections
+>>> obj.segments
+<Regions: [<ELFSegment memsize=0xa74, filesize=0xa74, vaddr=0x400000, flags=0x5, offset=0x0>,
+           <ELFSegment memsize=0x238, filesize=0x228, vaddr=0x600e28, flags=0x6, offset=0xe28>]>
+>>> obj.sections
+<Regions: [<Unnamed | offset 0x0, vaddr 0x0, size 0x0>,
+           <.interp | offset 0x238, vaddr 0x400238, size 0x1c>,
+           <.note.ABI-tag | offset 0x254, vaddr 0x400254, size 0x20>,
+            ...etc
+
+# You can get an individual segment or section by an address it contains:
+>>> obj.find_segment_containing(obj.entry)
+<ELFSegment memsize=0xa74, filesize=0xa74, vaddr=0x400000, flags=0x5, offset=0x0>
+>>> obj.find_section_containing(obj.entry)
+<.text | offset 0x580, vaddr 0x400580, size 0x338>
+
+# Get the address of the PLT stub for a symbol
+>>> addr = obj.plt['strcmp']
+>>> addr
+0x400550
+>>> obj.reverse_plt[addr]
+'strcmp'
+
+# Show the prelinked base of the object and the location it was actually mapped into memory by CLE
+>>> obj.linked_base
+0x400000
+>>> obj.mapped_base
+0x400000
+```
+
