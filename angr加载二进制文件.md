@@ -118,3 +118,18 @@ loader.find_symbol可以返回一个符号对象（参数可以是符号名字�
 - .rebase_addr   符号在全局地址空间的地址
 - .linked_addr  相对于预链接及地址的偏移
 - .relative_addr 相对于对象基地址的偏移，与RVA(相对虚拟地址类似)
+
+``` python
+>>> strcmp.name
+'strcmp'
+
+>>> strcmp.owner
+<ELF Object libc-2.23.so, maps [0x1000000:0x13c999f]>
+
+>>> strcmp.rebased_addr
+0x1089cd0
+>>> strcmp.linked_addr
+0x89cd0
+>>> strcmp.relative_addr
+0x89cd0
+```
