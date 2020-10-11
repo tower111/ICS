@@ -7,7 +7,7 @@ grammar_cjkRuby: true
 
 ## 加载器
 
-加载一个程序更深入的查看
+加载一个程序更深入的查看加载交互
 ``` python
 >>> import angr, monkeyhex
 >>> proj = angr.Project('examples/fauxware/fauxware')
