@@ -115,3 +115,5 @@ loader.find_symbol可以返回一个符号对象（参数可以是符号名字�
 <Symbol "strcmp" in libc.so.6 at 0x1089cd0>
 ```
 描述一个符号又三个属性：名称，所有者和地址。但是地址可能不明确，有三种方式报告它的地址
+- .rebase_addr   符号在全局地址空间的地址
+- 
