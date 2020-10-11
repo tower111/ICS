@@ -169,7 +169,7 @@ angr提供一些内置的分析提供一些信息
  proj.analyses.CFGFast              proj.analyses.Reassembler
 ```
 详细说明见[http://angr.io/api-doc/angr.html?highlight=cfg#module-angr.analysis](http://angr.io/api-doc/angr.html?highlight=cfg#module-angr.analysis)
-下面生成cfg图
+下面生成cfg图，这是一个networkx的图（具体使用说明见python的networks库）
 
 ``` python
 # Originally, when we loaded this binary it also loaded all its dependencies into the same virtual address  space
