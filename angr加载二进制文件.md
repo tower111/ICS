@@ -36,7 +36,7 @@ cle加载器(cle.Loader)i表示整个已加载二进制对象的组合，它们�
 >>> proj.loader.main_object
 <ELF Object fauxware, maps [0x400000:0x60105f]>
 
-# This is a dictionary mapping from shared object name to object
+# This is a dictionary mapping from shared object name to object  共享库有的名字和加载地址
 >>> proj.loader.shared_objects
 { 'fauxware': <ELF Object fauxware, maps [0x400000:0x60105f]>,
   'libc.so.6': <ELF Object libc-2.23.so, maps [0x1000000:0x13c999f]>,
