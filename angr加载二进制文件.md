@@ -152,7 +152,9 @@ True
 >>> main_strcmp.resolvedby #导入符号的来源
 <Symbol "strcmp" in libc.so.6 at 0x1089cd0>
 ```
-不是太理解它的重定位是什么意思 说明文档[https://docs.angr.io/core-concepts/loading](https://docs.angr.io/core-concepts/loading)
+说明文档的介绍是
+The specific ways that the links between imports and exports should be registered in memory are handled by another notion called relocations. A relocation says, "when you match [import] up with an export symbol, please write the export's address to [location], formatted as [format]." We can see the full list of relocations for an object (as Relocation instances) as obj.relocs, or just a mapping from symbol name to Relocation as obj.imports. There is no corresponding list of export symbols.
+A relocation's corresponding import symbol can be accessed as .symbol. The address the relocation will write to is accessable through any of the address identifiers you can use for Symbol, and you can get a reference to the object requesting the relocation with .owner as well.
 
 ``` python
 # Relocations don't have a good pretty-printing, so those addresses are python-internal, unrelated to our program
