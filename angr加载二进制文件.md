@@ -185,4 +185,6 @@ A relocation's corresponding import symbol can be accessed as .symbol. The addre
 
 二进制文件操作
 
-main_opts和lib_opts
+main_opts和lib_opts会有下面的选项
+
+- backend 使用哪个后端加载器
