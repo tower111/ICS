@@ -67,7 +67,7 @@ cle加载器(cle.Loader)i表示整个已加载二进制对象的组合，它们�
 >>> obj = proj.loader.main_object
 
 # The entry point of the object
->>> obj.entry  #项目的入口点
+>>> obj.entry  #对象的入口点（）
 0x400580
 
 >>> obj.min_addr, obj.max_addr
