@@ -175,4 +175,7 @@ A relocation's corresponding import symbol can be accessed as .symbol. The addre
 
 - auto_load_libs 默认启用，自动解析共享库
 - except_missing_libs 如果设置为True 共享库不能被解析的时候将会报错
-- 
+
+  
+ -  force_load_libs 一个字符串列表，每个选项都会被加载，不能加载会报错
+-  skip_libs 将会跳过被列出的共享库加载
