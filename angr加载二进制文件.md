@@ -22,3 +22,42 @@ cle加载器(cle.Loader)i表示整个已加载二进制对象的组合，它们�
 
 用loader.all_objects能加载完整的CLE项目，以及一些有针对性的分类
 
+``` python
+# All loaded objects
+>>> proj.loader.all_objects
+[<ELF Object fauxware, maps [0x400000:0x60105f]>,
+ <ELF Object libc-2.23.so, maps [0x1000000:0x13c999f]>,
+ <ELF Object ld-2.23.so, maps [0x2000000:0x2227167]>,
+ <ELFTLSObject Object cle##tls, maps [0x3000000:0x3015010]>,
+ <ExternObject Object cle##externs, maps [0x4000000:0x4008000]>,
+ <KernelObject Object cle##kernel, maps [0x5000000:0x5008000]>]
+
+# This is the "main" object, the one that you directly specified when loading the project
+>>> proj.loader.main_object
+<ELF Object fauxware, maps [0x400000:0x60105f]>
+
+# This is a dictionary mapping from shared object name to object
+>>> proj.loader.shared_objects
+{ 'fauxware': <ELF Object fauxware, maps [0x400000:0x60105f]>,
+  'libc.so.6': <ELF Object libc-2.23.so, maps [0x1000000:0x13c999f]>,
+  'ld-linux-x86-64.so.2': <ELF Object ld-2.23.so, maps [0x2000000:0x2227167]> }
+
+# Here's all the objects that were loaded from ELF files
+# If this were a windows program we'd use all_pe_objects!
+>>> proj.loader.all_elf_objects
+[<ELF Object fauxware, maps [0x400000:0x60105f]>,
+ <ELF Object libc-2.23.so, maps [0x1000000:0x13c999f]>,
+ <ELF Object ld-2.23.so, maps [0x2000000:0x2227167]>]
+
+# Here's the "externs object", which we use to provide addresses for unresolved imports and angr internals
+>>> proj.loader.extern_object
+<ExternObject Object cle##externs, maps [0x4000000:0x4008000]>
+
+# This object is used to provide addresses for emulated syscalls
+>>> proj.loader.kernel_object
+<KernelObject Object cle##kernel, maps [0x5000000:0x5008000]>
+
+# Finally, you can to get a reference to an object given an address in it
+>>> proj.loader.find_object_containing(0x400000)
+<ELF Object fauxware, maps [0x400000:0x60105f]>
+```
