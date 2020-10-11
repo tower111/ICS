@@ -98,7 +98,7 @@ cle加载器(cle.Loader)i表示整个已加载二进制对象的组合，它们�
 'strcmp'
 
 # Show the prelinked base of the object and the location it was actually mapped into memory by CLE
->>> obj.linked_base
+>>> obj.linked_base #一个对象的预链接基地址和实际上被CLE映射到内存中的位置
 0x400000
 >>> obj.mapped_base
 0x400000
