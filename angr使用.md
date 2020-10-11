@@ -144,7 +144,7 @@ SimState包含程序的内存，寄存器，文件系统信息，可以通过执
 ``` python
 >>> simgr.step()
 ```
-查看状态
+查看状态可以看到active已经被更新但是原始的state保持不变。
 
 ``` python
 >>> simgr.active
