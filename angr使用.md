@@ -144,3 +144,13 @@ SimState包含程序的内存，寄存器，文件系统信息，可以通过执
 ``` python
 >>> simgr.step()
 ```
+查看状态
+
+``` python
+>>> simgr.active
+[<SimState @ 0x1020300>]
+>>> simgr.active[0].regs.rip                 # new and exciting!
+<BV64 0x1020300>
+>>> state.regs.rip                           # still the same!
+<BV64 0x401670>
+```
