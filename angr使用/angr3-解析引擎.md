@@ -157,3 +157,10 @@ False
 0x3333333333333381
 ```
 如果添加冲突或自相矛盾的约束针对它的查询讲会引发一场，可以用下面的命令查看可满足性。
+
+``` python
+>>> state.solver.add(input < 2**32)
+>>> state.satisfiable()
+False
+```
+
