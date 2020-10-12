@@ -239,3 +239,4 @@ angr提供了舍入的方式，显式调用fp操作函数(如solver.fpAdd),并�
 >>> a.val_to_bv(12).val_to_fp(state.solver.fp.FSORT_FLOAT)
 <FP32 FPV(3.0, FLOAT)>
 ```
+上面的例子中也可以使用带符号的参数
