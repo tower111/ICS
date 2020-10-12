@@ -253,4 +253,4 @@ expression 表达式
 
 这些方法都可以使用下面的关键字
 
-extra_constraints
+- extra_constraints 可以作为一个约束的元组传递
