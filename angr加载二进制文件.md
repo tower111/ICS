@@ -241,3 +241,5 @@ True
 True
 ```
 可以用proj.hook_symbol（name，hook）（第一个参数为符号名字，第二个为符号地址）来对函数名字进行hook
+更多信息参考
+[http://angr.io/api-doc/cle.html](http://angr.io/api-doc/cle.html)
