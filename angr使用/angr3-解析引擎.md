@@ -248,3 +248,4 @@ expression 表达式
 - solver.eval(expression) 给定表达式的一种可能的方案。
 -  solver.eval_one(expression) 给出表达式的一种解决方案，如果不止一种则报错
 -  solver.eval_upto(expression, n) 将提供n个表达式的解决方案，不够n个有多少返回多少。
+-  solver.eval_atleast(expression, n) 将提供n个表达式的解决方案，不够n个将抛出错误。
