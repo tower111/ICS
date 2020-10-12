@@ -214,3 +214,16 @@ angr提供了舍入的方式，显式调用fp操作函数(如solver.fpAdd),并�
 >>> state.solver.eval(b)
 -2.4999999999999996
 ```
+浮点数和位向量之间可以转换
+
+``` python
+>>> a.raw_to_bv()
+<BV64 0x400999999999999a>
+>>> b.raw_to_bv()
+<BV64 fpToIEEEBV(FPS('FP_b_0_64', DOUBLE))>
+
+>>> state.solver.BVV(0, 64).raw_to_fp()
+<FP64 FPV(0.0, DOUBLE)>
+>>> state.solver.BVS('x', 64).raw_to_fp()
+<FP64 fpToFP(x_1_64, DOUBLE)>
+```
