@@ -205,3 +205,9 @@ blob ：将二进制文件作为平面镜像将在到内存（也就是不做任
 
 # 符号函数摘要
 默认情况下Project尝试使用称为SimProcedures的符号摘要来替换对库函数的外部调用，实际上是用python函数来模仿库函数影响state。
+
+内置的程序可以在angr.SIM_PROCEDURES字典中找到，字典有二维，第一维表示包名字(libc,posix,win32,stubs) 第二认为是函数名字。
+
+``` python
+angr.SIM_PROCEDURES['stubs']['ReturnUnconstrained']
+```
