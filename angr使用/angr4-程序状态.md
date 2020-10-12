@@ -35,7 +35,22 @@ successor 后继
 
 现在我们关心的时此对象的.successors属性该属性是一个列表，包含给定步骤的所有常规后继对象。
 
-为什么时一个列表而不是只有一个successor state呢？ angr的符号执行过程只会针对被编译程序的单个指令，执行它们时SimState变异。如果遇到分支（如 if (x > 4)）在angr中将会返回一个结果<Bool x_32_1 > 4>。
+为什么时一个列表而不是只有一个successor state呢？ angr的符号执行过程只会针对被编译程序的单个指令，执行它们时SimState变异。如果遇到分支（如 if (x > 4)）在angr中将会返回一个结果`<Bool x_32_1 > 4>`。
 
-但是实际上采用真的分支还是假的分支呢，angr采用的时两者都用，在两个分支处分别添加约束为x>4 和 !(x > 4)
+但是实际上采用真的分支还是假的分支呢，angr采用的时两者都用，在两个分支处分别添加约束为`x>4 和 !(x > 4)`
 
+``` python
+>>> proj = angr.Project('examples/fauxware/fauxware')
+>>> state = proj.factory.entry_state(stdin=angr.SimFile)  # ignore that argument for now - we're disabling a more complicated default setup for the sake of education
+>>> while True:# 一步一步运行直到遇到一个分支产生两种successor状态
+...     succ = state.step()
+...     if len(succ.successors) == 2:
+...         break
+...     state = succ.successors[0]
+
+>>> state1, state2 = succ.successors
+>>> state1
+<SimState @ 0x400629>
+>>> state2
+<SimState @ 0x400699
+```
