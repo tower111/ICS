@@ -208,6 +208,7 @@ blob ：将二进制文件作为平面镜像将在到内存（也就是不做任
 
 内置的程序可以在angr.SIM_PROCEDURES字典中找到，字典有二维，第一维表示包名字(libc,posix,win32,stubs) 第二认为是函数名字。
 
+如
 ``` python
 angr.SIM_PROCEDURES['stubs']['ReturnUnconstrained']
 ```
