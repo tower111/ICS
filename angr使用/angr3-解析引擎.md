@@ -136,7 +136,7 @@ False
 False
 ```
 # 约束求解
-可以对符号值加以限制
+可以对符号值加以限制。x和y的值每次运行都可能不同，但是要满足add里面的几个要求
 
 ``` python
 >>> state.solver.add(x > y)
