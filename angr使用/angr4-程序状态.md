@@ -82,4 +82,4 @@ b'\x00\x00\x00\x00\x00\x00\x00\x00\x00S\x00\x80N\x00\x00 \x00\x00\x00\x00'
 - 所有这些构造函数都可以使用参数`addr`来指定要启动的确切地址
 - 可以用args传递命令行参数列表，并通过env传递环境变量字典到entry_state和full_init_state。 这些结构中的值可以是字符串或者位向量，并将被序列化为state作为模拟执行的参数和环境。默认args是个空列表。
 - 如果希望argc设为符号可以将符号位向量作为argc传递给entry_state和full_state构造函数。注意：如果这样需要向结果state添加一个约束即argc的值不能大于传递给args的数量。
-- 调用状态：`.call_state(addr, arg1, arg2, ...)` addr是要调用的函数的地址，argN是该函数的第N个参数，可以是python证书，字符串或数组或位向量。
+- 调用状态：`.call_state(addr, arg1, arg2, ...)` addr是要调用的函数的地址，argN是该函数的第N个参数，可以是python整数，字符串或数组或位向量。
