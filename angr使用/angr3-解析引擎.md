@@ -178,3 +178,4 @@ False
 >>> state.solver.eval(x + y)
 6
 ```
+eval可以将任何位向量转化为python原语
