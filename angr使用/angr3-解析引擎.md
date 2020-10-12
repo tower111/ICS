@@ -117,14 +117,14 @@ grammar_cjkRuby: true
 <Bool False>
 ```
 
-不要在if或while语句的调价下直接使用便来给你之间的比较，因为答案可能没有具体的真实值。即使有一个具体真实值如果>>100也会引发异常。可以使用solver.is_true和solver.is_false来判断真假性
+不要在if或while语句的调价下直接使用便来给你之间的比较，因为答案可能没有具体的真实值。即使有一个具体真实值如果>>100也会引发异常。可以使用solver.is_true和solver.is_false来判断真假性  0
 ``` python
 >>> yes = one == 1
 >>> no = one == 2
 >>> maybe = x == y
 >>> state.solver.is_true(yes)
 True
->>> state.solver.is_false(yes)
+>>> state.solver.is_false(yes) 
 False
 >>> state.solver.is_true(no)
 False
