@@ -136,3 +136,12 @@ False
 False
 ```
 # 约束求解
+可以对符号值加以限制
+
+``` python
+>>> state.solver.add(x > y)
+>>> state.solver.add(y > 2)
+>>> state.solver.add(10 > x)
+>>> state.solver.eval(x)
+4
+```
