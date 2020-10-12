@@ -28,3 +28,5 @@ state.mem可以读写访问内存
 # add rax, qword ptr [rsp + 8]
 >>> state.regs.rax += state.mem[state.regs.rsp + 8].uint64_t.resolved
 ```
+# 基本执行
+下一章展示仿真管理的全部内容，但是这里将会展示一个比较简单的接口演示符号执行的工作方式state.step()
