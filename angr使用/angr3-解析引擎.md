@@ -250,3 +250,7 @@ expression 表达式
 -  solver.eval_upto(expression, n) 将提供n个表达式的解决方案，不够n个有多少返回多少。
 -  solver.eval_atleast(expression, n) 将提供n个表达式的解决方案，不够n个将抛出错误。
 -  solver.min(expression)，solver.max(expression)给定表达式的最小和最大解决方案
+
+这些方法都可以使用下面的关键字
+
+extra_constraints
