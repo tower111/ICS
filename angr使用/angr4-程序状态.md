@@ -80,4 +80,4 @@ b'\x00\x00\x00\x00\x00\x00\x00\x00\x00S\x00\x80N\x00\x00 \x00\x00\x00\x00'
 能通过构造函数的几个参数自定义状态
 
 - 所有这些构造函数都可以使用参数`addr`来指定要启动的确切地址
-- 可以用args传递命令行参数列表，并通过env传递环境变量字典到entry_state和full_initstate
+- 可以用args传递命令行参数列表，并通过env传递环境变量字典到entry_state和full_init_state
