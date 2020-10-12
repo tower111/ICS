@@ -205,4 +205,4 @@ eval可以将任何位向量转化为python原语同时保证状态的完整性�
 >>> b + 2 < 0
 <Bool fpLT(fpAdd('RNE', FPS('FP_b_0_64', DOUBLE), FPV(2.0, DOUBLE)), FPV(0.0, DOUBLE))>
 ```
-angr提供了摄入的方式
+angr提供了舍入的方式，显式调用fp操作函数(如solver.fpAdd)
