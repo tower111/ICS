@@ -227,3 +227,4 @@ angr提供了舍入的方式，显式调用fp操作函数(如solver.fpAdd),并�
 >>> state.solver.BVS('x', 64).raw_to_fp()
 <FP64 fpToFP(x_1_64, DOUBLE)>
 ```
+这些转化将保留位模式，就像浮点指针强制转化为int指针一样。
