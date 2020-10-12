@@ -56,4 +56,17 @@ successor 后继
 ```
 **strcmp**是一个用符号模拟非常棘手的函数，其结果非常复杂。
 
-模拟的程序从标准输入获取数据，默认情况下angr将其视为无限的符号数据流。 
+模拟的程序从标准输入获取数据，默认情况下angr将其视为无限的符号数据流。 要执行约束求解并获得满足约束条件的可能的输入我们需要获得stdin实际内容的引用。
+state.posix.stdin.load(0, state.posix.stdin.size)可以检索一个表示到目前位置从stdin读取的所有内容的位向量。（一般用于输出结果）
+
+``` python
+>>> input_data = state1.posix.stdin.load(0, state.posix.stdin.size)
+
+>>> state1.solver.eval(input_data, cast_to=bytes)
+b'\x00\x00\x00\x00\x00\x00\x00\x00\x00SOSNEAKY\x00\x00\x00'
+
+>>> state2.solver.eval(input_data, cast_to=bytes)
+b'\x00\x00\x00\x00\x00\x00\x00\x00\x00S\x00\x80N\x00\x00 \x00\x00\x00\x00'
+```
+
+# 预设状态
