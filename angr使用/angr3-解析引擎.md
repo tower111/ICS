@@ -98,3 +98,5 @@ grammar_cjkRuby: true
 >>> tree.args[0].args[1].args
 (1, 64)
 ```
+我们将使用“位向量”一词来指代其最高操作产生位向量的任何AST
+# 符号约束
