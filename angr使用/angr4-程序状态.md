@@ -35,5 +35,5 @@ successor 后继
 
 现在我们关心的时此对象的.successors属性该属性是一个列表，包含给定步骤的所有常规后继对象。
 
-为什么时一个列表而不是只有一个successor state呢？ angr的符号执行过程只会针对被编译程序的单个指令，执行它们时SimState变异。
+为什么时一个列表而不是只有一个successor state呢？ angr的符号执行过程只会针对被编译程序的单个指令，执行它们时SimState变异。如果遇到分支（如 if (x > 4)）
 
