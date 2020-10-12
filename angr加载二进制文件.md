@@ -217,4 +217,6 @@ angr.SIM_PROCEDURES['stubs']['ReturnUnconstrained']
 - auto_load_libs是ture（默认为true）真实库函数被代替执行
 - auto_load_libs 为false则外部函数无法解析，Project将会把它解析成叫ReturnUnconstrained的通用存根SimProcedure，每次调用都会返回一个唯一的不受约束的符号值。
 - use_sim_procedures 这是angr.Project的参数，不是cle.Loader的参数）为False（默认情况下为True）除了返回符号值什么都不做。
-- 
+
+## hook
+angr用python摘要代替库函数的机制叫hook。执行仿真模拟时angr会在每个步骤中检查当前地址是否已被hook，如果是就在该地址处运行hook而不是原本的二进制代码，proj.hook(addr,work)
