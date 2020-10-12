@@ -116,3 +116,22 @@ grammar_cjkRuby: true
 >>> one_hundred > -5
 <Bool False>
 ```
+
+
+``` python
+>>> yes = one == 1
+>>> no = one == 2
+>>> maybe = x == y
+>>> state.solver.is_true(yes)
+True
+>>> state.solver.is_false(yes)
+False
+>>> state.solver.is_true(no)
+False
+>>> state.solver.is_false(no)
+True
+>>> state.solver.is_true(maybe)
+False
+>>> state.solver.is_false(maybe)
+False
+```
