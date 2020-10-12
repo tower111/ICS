@@ -51,3 +51,14 @@ grammar_cjkRuby: true
 >>> one + weird_nine.zero_extend(64 - 27)
 <BV64 0xa>
 ```
+引入符号
+
+``` python
+# Create a bitvector symbol named "x" of length 64 bits
+>>> x = state.solver.BVS("x", 64)
+>>> x
+<BV64 x_9_64>
+>>> y = state.solver.BVS("y", 64)
+>>> y
+<BV64 y_10_64>
+```
