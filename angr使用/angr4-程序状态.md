@@ -54,4 +54,4 @@ successor 后继
 >>> state2
 <SimState @ 0x400699
 ```
-strcmp是一个用符号Moines非常棘手的函数，其结果非常复杂。
+strcmp是一个用符号模拟非常棘手的函数，其结果非常复杂。
