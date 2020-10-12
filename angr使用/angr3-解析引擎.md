@@ -78,3 +78,23 @@ grammar_cjkRuby: true
 <BV64 x_9_64 - y_10_64>
 ```
 如何处理AST
+
+每个AST都包含.op和.args
+
+``` python
+>>> tree = (x + 1) / (y + 2)
+>>> tree
+<BV64 (x_9_64 + 0x1) / (y_10_64 + 0x2)>
+>>> tree.op
+'__floordiv__'
+>>> tree.args
+(<BV64 x_9_64 + 0x1>, <BV64 y_10_64 + 0x2>)
+>>> tree.args[0].op
+'__add__'
+>>> tree.args[0].args
+(<BV64 x_9_64>, <BV64 0x1>)
+>>> tree.args[0].args[1].op
+'BVV'
+>>> tree.args[0].args[1].args
+(1, 64)
+```
