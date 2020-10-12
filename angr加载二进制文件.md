@@ -219,4 +219,4 @@ angr.SIM_PROCEDURES['stubs']['ReturnUnconstrained']
 - use_sim_procedures 这是angr.Project的参数，不是cle.Loader的参数）为False（默认情况下为True）除了返回符号值什么都不做。
 
 ## hook
-angr用python摘要代替库函数的机制叫hook。执行仿真模拟时angr会在每个步骤中检查当前地址是否已被hook，如果是就在该地址处运行hook而不是原本的二进制代码，proj.hook(addr,work)
+angr用python摘要代替库函数的机制叫hook。执行仿真模拟时angr会在每个步骤中检查当前地址是否已被hook，如果是就在该地址处运行hook而不是原本的二进制代码，proj.hook(addr,work)其中hook是SimProcedure实例可以用.is_hook,.unhook,.hooked_by管理项目的hook
