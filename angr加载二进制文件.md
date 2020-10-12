@@ -240,4 +240,4 @@ True
 >>> proj.is_hooked(0x20000)
 True
 ```
-可以用proj.hook_symbol（name，hook）来对函数名字进行hook
+可以用proj.hook_symbol（name，hook）（第一个参数为符号名字，第二个为符号地址）来对函数名字进行hook
