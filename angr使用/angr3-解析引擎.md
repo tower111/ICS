@@ -29,3 +29,4 @@ grammar_cjkRuby: true
 >>> weird_nine
 <BV27 0x9>
 ```
+位向量可以进行数学运算
