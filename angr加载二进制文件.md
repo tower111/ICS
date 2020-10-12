@@ -206,7 +206,7 @@ blob ：将二进制文件作为平面镜像将在到内存（也就是不做任
 # 符号函数摘要
 默认情况下Project尝试使用称为SimProcedures的符号摘要来替换对库函数的外部调用，实际上是用python函数来模仿库函数影响state。
 
-内置的程序可以在angr.SIM_PROCEDURES字典中找到，字典有二维，第一维表示包名字(libc,posix,win32,stubs) 第二认为是函数名字。
+内置的程序可以在angr.SIM_PROCEDURES字典中找到，字典有二维，第一维表示包名字(libc,posix,win32,stubs) 第二认为是函数名字。全部函数可以查看[https://github.com/angr/angr/tree/master/angr/procedures](https://github.com/angr/angr/tree/master/angr/procedures)
 
 如
 ``` python
@@ -216,4 +216,5 @@ angr.SIM_PROCEDURES['stubs']['ReturnUnconstrained']
 
 - auto_load_libs是ture（默认为true）真实库函数被代替执行
 - auto_load_libs 为false则外部函数无法解析，Project将会把它解析成叫ReturnUnconstrained的通用存根SimProcedure，每次调用都会返回一个唯一的不受约束的符号值。
-- use_sim_procedures 这是angr.Project的参数，不是cle.Loader的参数）为False（默认情况下为True）除了返回符号值什么都不做
+- use_sim_procedures 这是angr.Project的参数，不是cle.Loader的参数）为False（默认情况下为True）除了返回符号值什么都不做。
+- 
