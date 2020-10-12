@@ -43,3 +43,11 @@ grammar_cjkRuby: true
 >>> one_hundred - one*200
 <BV64 0xffffffffffffff9c>
 ```
+不同长度位向量扩展为相同之后才能运算
+
+``` python
+>>> weird_nine.zero_extend(64 - 27)
+<BV64 0x9>
+>>> one + weird_nine.zero_extend(64 - 27)
+<BV64 0xa>
+```
