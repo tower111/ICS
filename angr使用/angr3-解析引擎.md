@@ -145,7 +145,7 @@ False
 >>> state.solver.eval(x)
 4
 ```
-
+从这里课以看出来如何设置输入使这个输入能满足要求
 ``` python
 # get a fresh state without constraints
 >>> state = proj.factory.entry_state()
