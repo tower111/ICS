@@ -255,3 +255,5 @@ expression 表达式
 
 - extra_constraints 可以作为一个约束的元组传递，这些限制会在评估时考虑在内，但不会添加到state中
 - cast_to 结果的类型，目前只支持int和bytes。如state.solver.eval(state.solver.BVV(0x41424344, 32), cast_to=bytes) will return b'ABCD'.
+
+更多内容参考[https://docs.angr.io/appendix/ops](https://docs.angr.io/appendix/ops)
