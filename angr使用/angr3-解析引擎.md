@@ -117,7 +117,7 @@ grammar_cjkRuby: true
 <Bool False>
 ```
 
-
+不要在if或while语句的调价下直接使用便来给你之间的比较
 ``` python
 >>> yes = one == 1
 >>> no = one == 2
