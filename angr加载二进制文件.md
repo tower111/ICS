@@ -222,3 +222,21 @@ angr.SIM_PROCEDURES['stubs']['ReturnUnconstrained']
 angr用python摘要代替库函数的机制叫hook。执行仿真模拟时angr会在每个步骤中检查当前地址是否已被hook，如果是就在该地址处运行hook而不是原本的二进制代码，proj.hook(addr,work)其中hook是SimProcedure实例可以用.is_hook,.unhook,.hooked_by管理项目的hook。
 
 另一个函数是proj.hook(addr)作为函数装饰器，如果执行此操作还可以指定一个length关键字参数，使执行在挂钩完成后向前跳转一些字节
+
+``` python
+>>> stub_func = angr.SIM_PROCEDURES['stubs']['ReturnUnconstrained'] # this is a CLASS
+>>> proj.hook(0x10000, stub_func())  # hook with an instance of the class
+
+>>> proj.is_hooked(0x10000)            # these functions should be pretty self-explanitory
+True
+>>> proj.hooked_by(0x10000)
+<ReturnUnconstrained>
+>>> proj.unhook(0x10000)
+
+>>> @proj.hook(0x20000, length=5)
+... def my_hook(state):
+...     state.regs.rax = 1
+
+>>> proj.is_hooked(0x20000)
+True
+```
