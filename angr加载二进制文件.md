@@ -212,3 +212,5 @@ blob ：将二进制文件作为平面镜像将在到内存（也就是不做任
 ``` python
 angr.SIM_PROCEDURES['stubs']['ReturnUnconstrained']
 ```
+当没有此类摘要用于给定功能时
+
