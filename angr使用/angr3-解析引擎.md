@@ -101,6 +101,7 @@ grammar_cjkRuby: true
 我们将使用“位向量”一词来指代其最高操作产生位向量的任何AST
 # 符号约束
 
+任何两个相似的AST之间执行比较操作将产生一个bool值
 ```python
 >>> x == 1
 <Bool x_9_64 == 0x1>
