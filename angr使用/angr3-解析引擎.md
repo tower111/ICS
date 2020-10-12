@@ -6,3 +6,9 @@ grammar_cjkRuby: true
 ---
 
 # 使用位向量
+
+```python
+>>> import angr, monkeyhex
+>>> proj = angr.Project('/bin/true')
+>>> state = proj.factory.entry_state()
+```
