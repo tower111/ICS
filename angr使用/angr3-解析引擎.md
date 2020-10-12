@@ -30,3 +30,16 @@ grammar_cjkRuby: true
 <BV27 0x9>
 ```
 位向量可以进行数学运算
+
+``` python
+>>> one + one_hundred
+<BV64 0x65>
+
+# You can provide normal python integers and they will be coerced to the appropriate type:
+>>> one_hundred + 0x100
+<BV64 0x164>
+
+# The semantics of normal wrapping arithmetic apply
+>>> one_hundred - one*200
+<BV64 0xffffffffffffff9c>
+```
