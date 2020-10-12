@@ -100,3 +100,18 @@ grammar_cjkRuby: true
 ```
 我们将使用“位向量”一词来指代其最高操作产生位向量的任何AST
 # 符号约束
+
+```python
+>>> x == 1
+<Bool x_9_64 == 0x1>
+>>> x == one
+<Bool x_9_64 == 0x1>
+>>> x > 2
+<Bool x_9_64 > 0x2>
+>>> x + y == one_hundred + 5
+<Bool (x_9_64 + y_10_64) == 0x69>
+>>> one_hundred > 5
+<Bool True>
+>>> one_hundred > -5
+<Bool False>
+```
