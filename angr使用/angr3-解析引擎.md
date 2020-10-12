@@ -145,3 +145,14 @@ False
 >>> state.solver.eval(x)
 4
 ```
+
+``` python
+# get a fresh state without constraints
+>>> state = proj.factory.entry_state()
+>>> input = state.solver.BVS('input', 64)
+>>> operation = (((input + 4) * 3) >> 1) + input
+>>> output = 200
+>>> state.solver.add(operation == output)
+>>> state.solver.eval(input)
+0x3333333333333381
+```
