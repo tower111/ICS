@@ -215,4 +215,5 @@ angr.SIM_PROCEDURES['stubs']['ReturnUnconstrained']
 当没有此类摘要用于给定功能时
 
 - auto_load_libs是ture（默认为true）真实库函数被代替执行
-- auto_load_libs 为false则外部函数无法解析，Project将会把它解析成叫ReturnUnconstrained的通用存根SimProcedure，每次调用都会返回一个唯一的不受约束的符号值
+- auto_load_libs 为false则外部函数无法解析，Project将会把它解析成叫ReturnUnconstrained的通用存根SimProcedure，每次调用都会返回一个唯一的不受约束的符号值。
+- 
