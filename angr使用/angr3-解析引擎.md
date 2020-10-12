@@ -184,3 +184,24 @@ eval可以将任何位向量转化为python原语同时保证状态的完整性�
 
 # 浮点数
 浮点数不是宽度二十排序，可以用FPV和FPS创建
+
+``` python
+# fresh state
+>>> state = proj.factory.entry_state()
+>>> a = state.solver.FPV(3.2, state.solver.fp.FSORT_DOUBLE)
+>>> a
+<FP64 FPV(3.2, DOUBLE)>
+
+>>> b = state.solver.FPS('b', state.solver.fp.FSORT_DOUBLE)
+>>> b
+<FP64 FPS('FP_b_0_64', DOUBLE)>
+
+>>> a + b
+<FP64 fpAdd('RNE', FPV(3.2, DOUBLE), FPS('FP_b_0_64', DOUBLE))>
+
+>>> a + 4.4
+<FP64 FPV(7.6000000000000005, DOUBLE)>
+
+>>> b + 2 < 0
+<Bool fpLT(fpAdd('RNE', FPS('FP_b_0_64', DOUBLE), FPV(2.0, DOUBLE)), FPV(0.0, DOUBLE))>
+```
