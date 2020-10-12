@@ -214,4 +214,4 @@ angr.SIM_PROCEDURES['stubs']['ReturnUnconstrained']
 ```
 当没有此类摘要用于给定功能时
 
-- auto_load_libs是ture（默认为true）
+- auto_load_libs是ture（默认为true）真实库函数被代替执行
