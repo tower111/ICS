@@ -164,3 +164,17 @@ False
 False
 ```
 
+能评估更多变量而不止一个
+
+``` python
+# fresh state
+>>> state = proj.factory.entry_state()
+>>> state.solver.add(x - y >= 4)
+>>> state.solver.add(y > 0)
+>>> state.solver.eval(x)
+5
+>>> state.solver.eval(y)
+1
+>>> state.solver.eval(x + y)
+6
+```
