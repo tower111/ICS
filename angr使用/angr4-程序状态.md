@@ -131,4 +131,11 @@ endness时archinfo软件包中Endness美剧的成员之一，该包保存有关a
 
 state.globals是一个非常简单的插件：它实现了标准python dict的接口，允许您在状态上存储任意数据
 
-state.history 用于存储有关状态在执行期间所经过的路径的历史数据。
+state.history 用于存储有关状态在执行期间所经过的路径的历史数据。它实际上是几个历史节点的链接列表，每个节点代表一轮执行-您可以使用state.history.parent.parent等遍历此列表。
+
+``` python
+for addr in state.history.bbl_addrs: print hex(addr)
+```
+将会打印二进制文件的基本块地址追踪。
+`state.history.recent_bbl_addrs`是最近一步中执行基本块的列表
+`state.history.parent.recent_bbl_addrs`是上一步中执行基本块的列表
