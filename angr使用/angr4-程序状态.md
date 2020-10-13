@@ -141,3 +141,7 @@ for addr in state.history.bbl_addrs: print hex(addr)
 `state.history.parent.recent_bbl_addrs`是上一步中执行基本块的列表
 如果需要把 state.history.bbl_addrs的迭代器版本转化为列表可以使用state.history.bbl_addrs.hardcopy
 
+- history.descriptions 是在状态上执行的每轮执行的字符串描述的列表。
+- history.bbl_addrs 该状态执行基本块地址的列表。每轮执行可能有多个，并且并非所有地址都能对应于二进制代码（有些可能是SimProceDures挂接的地址）
+- history.jumpkinds 以VEX枚举字符串的形式列出了该状态历史中每个控制流转换的处理方式。
+- history.events 执行期间发生有趣时间的语义列表，例如出现符号跳转条件，程序弹出消息框或执行推出代码终止 
