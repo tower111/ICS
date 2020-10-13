@@ -125,3 +125,4 @@ endness时archinfo软件包中Endness美剧的成员之一，该包保存有关a
 # Create a new state without simplification options enabled
 >>> s = proj.factory.entry_state(remove_options=angr.options.simplification)
 ```
+# 状态插件
