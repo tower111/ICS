@@ -85,3 +85,4 @@ b'\x00\x00\x00\x00\x00\x00\x00\x00\x00S\x00\x80N\x00\x00 \x00\x00\x00\x00'
 - 调用状态：`.call_state(addr, arg1, arg2, ...)` addr是要调用的函数的地址，argN是该函数的第N个参数，可以是python整数，字符串或数组或位向量。如果想要分配实际内存并将指针传递给对象则应将其包装在PointerWrapper中（例如：angr.PointerWrapper("point to me!")），这个API的结果可能有点不可预测......（是不能使用吗，angr团队正在优化）
 - 为了指定一个call_state函数的调用约定，可以用SimCC接口作为cc参数。SimCC接口查看[http://angr.io/api-doc/angr.html#module-angr.calling_conventions](http://angr.io/api-doc/angr.html#module-angr.calling_conventions)
 
+http://angr.io/api-doc/angr.html#angr.factory.AngrObjectFactory
