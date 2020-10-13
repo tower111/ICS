@@ -131,4 +131,4 @@ endness时archinfo软件包中Endness美剧的成员之一，该包保存有关a
 
 state.globals是一个非常简单的插件：它实现了标准python dict的接口，允许您在状态上存储任意数据
 
-state.history
+state.history 用于存储有关状态在执行期间所经过的路径的历史数据。
