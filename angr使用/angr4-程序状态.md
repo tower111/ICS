@@ -140,3 +140,4 @@ for addr in state.history.bbl_addrs: print hex(addr)
 `state.history.recent_bbl_addrs`是最近一步中执行基本块的列表
 `state.history.parent.recent_bbl_addrs`是上一步中执行基本块的列表
 如果需要把 state.history.bbl_addrs的迭代器版本转化为列表可以使用state.history.bbl_addrs.hardcopy
+
