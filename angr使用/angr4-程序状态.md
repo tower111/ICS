@@ -89,3 +89,15 @@ b'\x00\x00\x00\x00\x00\x00\x00\x00\x00S\x00\x80N\x00\x00 \x00\x00\x00\x00'
 
 # 低级内存接口
 
+state.mem 接口从内存中加载或存储某种类型的数据时很方便，但是对内存范围进行原始数据的加载和存储时非常麻烦。
+
+可以表示一个平面地址空间：state.memory。 一般使用.load(addr,size)和.store(addr,val)方法进行存取
+
+``` python
+>>> s = proj.factory.blank_state()
+>>> s.memory.store(0x4000, s.solver.BVV(0x0123456789abcdef0123456789abcdef, 128))
+>>> s.memory.load(0x4004, 6) # load-size is in bytes
+<BV48 0x89abcdef0123>
+
+```
+
