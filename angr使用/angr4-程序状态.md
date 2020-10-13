@@ -126,3 +126,5 @@ endness时archinfo软件包中Endness美剧的成员之一，该包保存有关a
 >>> s = proj.factory.entry_state(remove_options=angr.options.simplification)
 ```
 # 状态插件
+
+除了刚才讨论的选项集，存储在SimState中的所有内容实际上都存储在该状态所附加的插件中。
