@@ -98,6 +98,8 @@ state.mem 接口从内存中加载或存储某种类型的数据时很方便，�
 >>> s.memory.store(0x4000, s.solver.BVV(0x0123456789abcdef0123456789abcdef, 128))
 >>> s.memory.load(0x4004, 6) # load-size is in bytes
 <BV48 0x89abcdef0123>
-
 ```
+state.memory没有对大小端的设置，数据都是以打断存储方式存储和加载的。
+
+可以使用endness指定是否要对字节进行交换（可以实现大小端转化）
 
