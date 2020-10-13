@@ -128,3 +128,5 @@ endness时archinfo软件包中Endness美剧的成员之一，该包保存有关a
 # 状态插件
 
 除了刚才讨论的选项集，存储在SimState中的所有内容实际上都存储在该状态所附加的插件中。包括内存，寄存器，mem，reg，solver等
+
+state.globals是一个非常简单的插件：它实现了标准python dict的接口，允许您在状态上存储任意数据
