@@ -114,8 +114,8 @@ endness时archinfo软件包中Endness美剧的成员之一，该包保存有关a
 # state选项
 
 ``` python
-# Example: enable lazy solves, an option that causes state satisfiability to be checked as infrequently as possible.
-# This change to the settings will be propagated to all successor states created from this state after this line.
+# Example: enable lazy solves, an option that causes state satisfiability to be checked as infrequently as possible.#
+# This change to the settings will be propagated to all successor states created from this state after this line. #对设置的更改将传播到由此状态创建的所有后继状态
 >>> s.options.add(angr.options.LAZY_SOLVES)
 
 # Create a new state with lazy solves enabled
