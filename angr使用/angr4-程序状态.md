@@ -112,6 +112,7 @@ endness时archinfo软件包中Endness美剧的成员之一，该包保存有关a
 ```
 
 # state选项
+添加一些state的选项，这些选项有时候会优化行为，而在其他情况下不利，可以用state.options进行更改.
 
 ``` python
 # Example: enable lazy solves, an option that causes state satisfiability to be checked as infrequently as possible.#
