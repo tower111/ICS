@@ -103,3 +103,4 @@ state.memory没有对大小端的设置，数据都是以打断存储方式存�
 
 可以使用endness指定是否要对字节进行交换（可以实现大小端转化）
 
+endness时archinfo软件包中Endness美剧的成员之一，该包保存有关angr的CPU体系结构的声明性数据。
