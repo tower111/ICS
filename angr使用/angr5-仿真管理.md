@@ -49,3 +49,4 @@ state被组织为stashes（存储区）可以根据需要前进，过滤，合�
 当状态在执行期间无法产生任何后缀时（例如：因为到达exit系统调用，将其从活动stash中删除）将会被放置在`deadended`(无用)stash。
 
 # stash管理
+看看其他的stash怎样工作的。
