@@ -152,4 +152,6 @@ for addr in state.history.bbl_addrs: print hex(addr)
 
 angr将会追踪模拟程序的调用栈，每当执行调用函数指令(如call)之前都会存储一个frame，这个frame将会方便angr管理函数。
 
-state.callstack获得每个活跃frame的调用栈帧
+state.callstack获得每个活跃frame的调用栈帧。
+
+- callstack.func_addr
