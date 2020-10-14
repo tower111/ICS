@@ -145,4 +145,4 @@ for addr in state.history.bbl_addrs: print hex(addr)
 - history.bbl_addrs 该状态执行基本块地址的列表。每轮执行可能有多个，并且并非所有地址都能对应于二进制代码（有些可能是SimProceDures挂接的地址）
 - history.jumpkinds 以VEX枚举字符串的形式列出了该状态历史中每个控制流转换的处理方式。
 - history.events 执行期间发生有趣时间的语义列表，例如出现符号跳转条件，程序弹出消息框或执行推出代码终止 
-- history.actions 通常为空但是如果添加`angr.options.refs`选项到该state将会
+- history.actions 通常为空但是如果添加`angr.options.refs`选项到该state它将会填充改程序执行的所有内存寄存器和临时访问的日志.
