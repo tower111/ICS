@@ -163,3 +163,5 @@ state.callstack获得每个活跃frame的调用栈帧。
 详细内容参考 [https://docs.angr.io/advanced-topics/file_system](https://docs.angr.io/advanced-topics/file_system)
 
 # 复制和合并
+
+状态支持非常快速的副本，因此可以探索不同的可能性。
