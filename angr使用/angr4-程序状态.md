@@ -160,3 +160,4 @@ state.callstack获得每个活跃frame的调用栈帧。
 - callstack.ret_addr 当前函数返回时将返回的地址。
 
 # 有关I/O的信息：文件，文件系统和网络套接字
+详细内容参考 [https://docs.angr.io/advanced-topics/file_system](https://docs.angr.io/advanced-topics/file_system)
