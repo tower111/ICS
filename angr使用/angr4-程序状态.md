@@ -161,3 +161,5 @@ state.callstack获得每个活跃frame的调用栈帧。
 
 # 有关I/O的信息：文件，文件系统和网络套接字
 详细内容参考 [https://docs.angr.io/advanced-topics/file_system](https://docs.angr.io/advanced-topics/file_system)
+
+# 复制和合并
