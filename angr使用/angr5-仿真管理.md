@@ -129,3 +129,8 @@ angr附带了几项固定功能，可以让你自定义模拟管理器的行为�
 angr提供了改变它步进过程中的行为的接口，下一章会介绍编写自己的探测技术。
 
 可以使用simgr.use_technique(tech)，其中tech是Exploration Technique子类的实例可以在angr.exoloration_techniques下找到angr的内置探测技术。
+
+这是一些内置的探测技术
+- DFS 深度优先搜索，一次仅使一个state保持活动，将其余放到deferred stash中知道其陷入deadends（死胡同）或出错
+- Explorer 实现了 .explore()函数
+- LengthLimiter 对状态通过的路径的最大长度设置上限。
