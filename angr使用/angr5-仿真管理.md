@@ -93,4 +93,11 @@ angr提供了一些默认的分类
 # 简单探索
 常见操作是找到到达某个地址的状态，同时丢弃通过另一个地址的所有状态。模拟管理提供了一个.explore()方法。
 
-结束的可以是一个地址或者一个地址列表或者是一个到达某种准则的函数。当stashs中任意state与查找条件相匹配时，他们将会被放到`found` stash中并且种植执行（也就是只会有一个state满足）
+结束的可以是一个地址或者一个地址列表或者是一个到达某种准则的函数。当stashs中任意state与查找条件相匹配时，他们将会被放到`found` stash中并且终止执行（也就是只会有一个state满足）。然后你能查看found state或决定放弃它继续其他状态。
+
+avoid格式和find一样，会把运行到的state放到avoided stash中然后继续执行。
+
+num_find 参数可以控制多少个state会被放到find stash中，默认值为1。
+
+例子查看[https://docs.angr.io/examples#reverseme-modern-binary-exploitation---csci-4968](https://docs.angr.io/examples#reverseme-modern-binary-exploitation---csci-4968)
+
