@@ -30,3 +30,20 @@ state被组织为stashes（存储区）可以根据需要前进，过滤，合�
 当一个状态遇到符号分之条件时，两个继承状态都将显示在stash，并且可以使它们两个都同步。
 
 如果不在乎控制分析，只想逐步执行直到没有任何可以执行的步骤可以使用.run()方法。
+
+``` python
+# Step until the first symbolic branch
+>>> while len(simgr.active) == 1:
+...    simgr.step()
+
+>>> simgr
+<SimulationManager with 2 active>
+>>> simgr.active
+[<SimState @ 0x400692>, <SimState @ 0x400699>]
+
+# Step until everything terminates
+>>> simgr.run()
+>>> simgr
+<SimulationManager with 3 deadended>
+```
+当状态在执行期间无法产生任何后缀时（例如：因为到达exit系统调用，将其从活动stash中删除）将会被放置在`deadended`(无用)stash
