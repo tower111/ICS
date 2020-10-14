@@ -89,3 +89,6 @@ angr提供了一些默认的分类
 - unsat 如果把save_unsat选项传递给SimulationManager 构造函数，确定为无法满足的state(它们具有矛盾的约束)将会放到这里。
 
 **还有一个states的列表但是不是stash：`errored`如果执行过程中引发错误，则将状态包装在ErrorRecord对象中该对象包含状态和引发的错误，然后将记录插入错误中。可以获取导致record.state错误的执行开始时的状态，可以看到record.state引发的错误还可以使用record.debug()在错误的地方启动调试shell。**
+
+# 简单探索
+常见操作是找到到达某个地址的状态，同时丢弃通过另一个地址的所有状态。
