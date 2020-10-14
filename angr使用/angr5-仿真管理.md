@@ -60,3 +60,21 @@ state被组织为stashes（存储区）可以根据需要前进，过滤，合�
 ```
 创建一个新的stash,名字叫做"authenticated"。
 
+
+每个stash是一个列表，可以用索引或者遍历该列表以访问每个单独的状态，也提供了一些替代的方法可以访问这些状态。如果在stash名字前面添加`one_`将访问第一个stash
+
+``` python
+>>> for s in simgr.deadended + simgr.authenticated:
+...     print(hex(s.addr))
+0x1000030
+0x1000078
+0x1000078
+
+>>> simgr.one_deadended
+<SimState @ 0x1000030>
+>>> simgr.mp_authenticated
+MP([<SimState @ 0x1000078>, <SimState @ 0x1000078>])
+>>> simgr.mp_authenticated.posix.dumps(0)
+MP(['\x00\x00\x00\x00\x00\x00\x00\x00\x00SOSNEAKY\x00',
+    '\x00\x00\x00\x00\x00\x00\x00\x00\x00S\x80\x80\x80\x80@\x80@\x00'])
+```
