@@ -182,6 +182,8 @@ state也能合并在一起
 # merge will return a tuple. the first element is the merged state
 # the second element is a symbolic variable describing a state flag
 # the third element is a boolean describing whether any merging was done
+#合并的结果是一个三元组，第一个元素是合并的状态，第二个元素是描述一个状态标志的符号变量。
+#第三个元素是boolean数据描述是否合并完成
 >>> (s_merged, m, anything_merged) = s1.merge(s2)
 
 # this is now an expression that can resolve to "AAAA" *or* "BBBB"
