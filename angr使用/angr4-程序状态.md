@@ -128,9 +128,10 @@ endness时archinfo软件包中Endness美剧的成员之一，该包保存有关a
 # 状态插件
 
 除了刚才讨论的选项集，存储在SimState中的所有内容实际上都存储在该状态所附加的插件中。包括内存，寄存器，mem，reg，solver等
-
+## 全局插件
 state.globals是一个非常简单的插件：它实现了标准python dict的接口，允许您在状态上存储任意数据
 
+## 历史插件
 state.history 用于存储有关状态在执行期间所经过的路径的历史数据。它实际上是几个历史节点的链接列表，每个节点代表一轮执行-您可以使用state.history.parent.parent等遍历此列表。
 
 ``` python
@@ -146,3 +147,4 @@ for addr in state.history.bbl_addrs: print hex(addr)
 - history.jumpkinds 以VEX枚举字符串的形式列出了该状态历史中每个控制流转换的处理方式。
 - history.events 执行期间发生有趣时间的语义列表，例如出现符号跳转条件，程序弹出消息框或执行推出代码终止 
 - history.actions 通常为空但是如果添加`angr.options.refs`选项到该state它将会填充改程序执行的所有内存寄存器和临时访问的日志.
+
