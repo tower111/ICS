@@ -150,3 +150,4 @@ for addr in state.history.bbl_addrs: print hex(addr)
 
 ## 调用栈插件
 
+angr将会追踪模拟程序的调用栈
