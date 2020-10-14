@@ -178,7 +178,7 @@ state.callstack获得每个活跃frame的调用栈帧。
 state也能合并在一起
 
 ``` python
-
+#merge 合并
 # merge will return a tuple. the first element is the merged state
 # the second element is a symbolic variable describing a state flag
 # the third element is a boolean describing whether any merging was done
