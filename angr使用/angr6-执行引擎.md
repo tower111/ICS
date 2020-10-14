@@ -14,4 +14,4 @@ angr是按照顺序尝试所有可用引擎，采用一个能处理此步骤的�
 - 进入最后callback的时候VEX引擎将会启动。
 
 # SimSuccessors
-实际尝试所有引擎的代码是`project.factory.successors(state, **kwargs)`，
+实际尝试所有引擎的代码是`project.factory.successors(state, **kwargs)`，将它的参数传递给每个引擎这个函数是`state.step() `和` simulation_manager.step()`函数的核心
