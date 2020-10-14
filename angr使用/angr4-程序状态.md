@@ -81,7 +81,7 @@ b'\x00\x00\x00\x00\x00\x00\x00\x00\x00S\x00\x80N\x00\x00 \x00\x00\x00\x00'
 
 - 所有这些构造函数都可以使用参数`addr`来指定要启动的确切地址
 - 可以用args传递命令行参数列表，并通过env传递环境变量字典到entry_state和full_init_state。 这些结构中的值可以是字符串或者位向量，并将被序列化为state作为模拟执行的参数和环境。默认args是个空列表。
-- 如果希望argc设为符号可以将符号位向量作为argc传递给entry_state和full_state构造函数。注意：如果这样需要向结果state添加一个约束即argc的值不能大于传递给args的数量。
+- 如果希望argc设为符号可以将符号位向量作为argc传递给entry_state和full_state构造函数。注意：如果这样需要向结果state添加一个约束即argc的值不<i class="fas fa-highlighter"></i>能大于传递给args的数量。
 - 调用状态：`.call_state(addr, arg1, arg2, ...)` addr是要调用的函数的地址，argN是该函数的第N个参数，可以是python整数，字符串或数组或位向量。如果想要分配实际内存并将指针传递给对象则应将其包装在PointerWrapper中（例如：angr.PointerWrapper("point to me!")），这个API的结果可能有点不可预测......（是不能使用吗，angr团队正在优化）
 - 为了指定一个call_state函数的调用约定，可以用SimCC接口作为cc参数。SimCC接口查看[http://angr.io/api-doc/angr.html#module-angr.calling_conventions](http://angr.io/api-doc/angr.html#module-angr.calling_conventions)
 
@@ -145,3 +145,4 @@ for addr in state.history.bbl_addrs: print hex(addr)
 - history.bbl_addrs 该状态执行基本块地址的列表。每轮执行可能有多个，并且并非所有地址都能对应于二进制代码（有些可能是SimProceDures挂接的地址）
 - history.jumpkinds 以VEX枚举字符串的形式列出了该状态历史中每个控制流转换的处理方式。
 - history.events 执行期间发生有趣时间的语义列表，例如出现符号跳转条件，程序弹出消息框或执行推出代码终止 
+- history.actions 通常为空但是如果添加`angr.options.refs`选项到该state将会
