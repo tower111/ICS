@@ -154,4 +154,4 @@ angr将会追踪模拟程序的调用栈，每当执行调用函数指令(如cal
 
 state.callstack获得每个活跃frame的调用栈帧。
 
-- callstack.func_addr
+- callstack.func_addr 当前正在执行的函数地址
