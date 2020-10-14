@@ -50,3 +50,11 @@ state被组织为stashes（存储区）可以根据需要前进，过滤，合�
 
 # stash管理
 看看其他的stash怎样工作的。
+
+从stashes之间移动状态使用.move()
+
+``` python
+>>> simgr.move(from_stash='deadended', to_stash='authenticated', filter_func=lambda s: b'Welcome' in s.posix.dumps(1))
+>>> simgr
+<SimulationManager with 2 authenticated, 1 deadended>
+```
