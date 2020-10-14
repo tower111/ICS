@@ -137,4 +137,4 @@ angr提供了改变它步进过程中的行为的接口，下一章会介绍编�
 - LoopSeer  使用合理的循环计数近似值来丢弃似乎经历多次循环的状态，把它们放到`spinning(旋转)`stash中如果我们用尽了其他可行的状态再将它们拉出。
 - ManualMergepoint（手动合并点） 在程序中标记一个地址作为合并点，因此到达该地址的状态将会被短暂保留，并且在超时时间内达到同一点的任何其他状态将会被合并在一起。
 - MemoryWatcher（内存观察者）见识simgr步骤之间系统上空闲/可用的内存量，并在内存太低时停止探索
-- Oppologist（眼科医生）
+- Oppologist（operation apologist）
