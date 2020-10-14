@@ -5,3 +5,4 @@ renderNumberedHeading: true
 grammar_cjkRuby: true
 ---
 
+SimulationManager允许同时控制状态组的符号执行
