@@ -83,5 +83,5 @@ MP(['\x00\x00\x00\x00\x00\x00\x00\x00\x00SOSNEAKY\x00',
 
 - 除非指定了备用stash，否则默认情况下将逐步执行状态。
 - deadended  当state由于某种原因无法继续执行时，state将进入死锁状态，包括不再有有效的指令，所有后继者的状态都到了不满意的状态（应该是探索的时候指定的avoid），或者无效的指令指针。
-- unconstrained 如果save_unconstrained选项给提供给SimulationManager 构造函数
+- unconstrained 如果save_unconstrained选项给提供给SimulationManager 构造函数。确定为不受约束的状态（）会放到这里
 - 
