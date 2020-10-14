@@ -142,3 +142,4 @@ angr提供了改变它步进过程中的行为的接口，下一章会介绍编�
 - Threading  在步进过程中增加线程级别的并行性。python全局解释器的锁定，这里并没有多大用处。但是如果程序的分花费大量时间在angr的本机代码依赖项上将会有所收获。
 - Tracer  （个人理解）使执行能够动态追踪动态库。动态追踪存储库有一些工具来生成这些轨迹。[https://github.com/angr/tracer](https://github.com/angr/tracer)
 - Veritesting  自动识别有用合并点的MCU论文的实现 论文地址[https://users.ece.cmu.edu/~dbrumley/pdf/Avgerinos%20et%20al._2014_Enhancing%20Symbolic%20Execution%20with%20Veritesting.pdf](https://users.ece.cmu.edu/~dbrumley/pdf/Avgerinos%20et%20al._2014_Enhancing%20Symbolic%20Execution%20with%20Veritesting.pdf)
+- 
