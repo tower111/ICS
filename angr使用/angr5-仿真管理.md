@@ -104,9 +104,15 @@ num_find 参数可以控制多少个state会被放到find stash中，默认值�
 
 ``` python
 >>> proj = angr.Project('examples/CSCI-4968-MBE/challenges/crackme0x00a/crackme0x00a')
+
+
 >>> simgr = proj.factory.simgr()
+
+
 >> simgr.explore(find=lambda s: b"Congrats" in s.posix.dumps(1))
 <SimulationManager with 1 active, 1 found>
+
+
 >>> s = simgr.found[0]
 >>> print(s.posix.dumps(1))
 Enter password: Congrats!
