@@ -165,3 +165,25 @@ state.callstack获得每个活跃frame的调用栈帧。
 # 复制和合并
 
 状态支持非常快速的副本，因此可以探索不同的可能性。
+
+``` python
+>>> proj = angr.Project('/bin/true')
+>>> s = proj.factory.blank_state()
+>>> s1 = s.copy()
+>>> s2 = s.copy()
+
+>>> s1.mem[0x1000].uint32_t = 0x41414141
+>>> s2.mem[0x1000].uint32_t = 0x42424242
+```
+state也能合并在一起
+
+``` python
+
+# merge will return a tuple. the first element is the merged state
+# the second element is a symbolic variable describing a state flag
+# the third element is a boolean describing whether any merging was done
+>>> (s_merged, m, anything_merged) = s1.merge(s2)
+
+# this is now an expression that can resolve to "AAAA" *or* "BBBB"
+>>> aaaa_or_bbbb = s_merged.mem[0x1000].uint32_t
+```
