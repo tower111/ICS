@@ -101,3 +101,7 @@ num_find 参数可以控制多少个state会被放到find stash中，默认值�
 
 例子查看[https://docs.angr.io/examples#reverseme-modern-binary-exploitation---csci-4968](https://docs.angr.io/examples#reverseme-modern-binary-exploitation---csci-4968)
 
+
+``` python
+>>> proj = angr.Project('examples/CSCI-4968-MBE/challenges/crackme0x00a/crackme0x00a')
+```
