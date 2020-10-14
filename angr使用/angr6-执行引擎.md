@@ -13,3 +13,5 @@ angr是按照顺序尝试所有可用引擎，采用一个能处理此步骤的�
 - 启动UNICORN状态选项并且状态中没有符号数据时unicorn引擎将会启动。
 - 进入最后callback的时候VEX引擎将会启动。
 
+# SimSuccessors
+实际尝试所有引擎的代码是`project.factory.successors(state, **kwargs)`，
