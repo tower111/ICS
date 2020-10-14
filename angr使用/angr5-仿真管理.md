@@ -51,7 +51,7 @@ state被组织为stashes（存储区）可以根据需要前进，过滤，合�
 # stash管理
 看看其他的stash怎样工作的。
 
-从stashes之间移动状态使用.move()
+从stashes之间移动状态使用.move()。下面的例子展示移动其中输出中具有特定字符串的内容。（stash的种类下文将会讲到）
 
 ``` python
 >>> simgr.move(from_stash='deadended', to_stash='authenticated', filter_func=lambda s: b'Welcome' in s.posix.dumps(1))
