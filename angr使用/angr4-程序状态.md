@@ -148,3 +148,5 @@ for addr in state.history.bbl_addrs: print hex(addr)
 - history.events 执行期间发生有趣时间的语义列表，例如出现符号跳转条件，程序弹出消息框或执行推出代码终止 
 - history.actions 通常为空但是如果添加`angr.options.refs`选项到该state它将会填充改程序执行的所有内存寄存器和临时访问的日志.
 
+## 调用栈插件
+
