@@ -58,3 +58,5 @@ state被组织为stashes（存储区）可以根据需要前进，过滤，合�
 >>> simgr
 <SimulationManager with 2 authenticated, 1 deadended>
 ```
+创建一个新的stash,名字叫做"authenticated"。
+
