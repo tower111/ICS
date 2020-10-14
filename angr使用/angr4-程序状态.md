@@ -156,4 +156,5 @@ state.callstack获得每个活跃frame的调用栈帧。
 
 - callstack.func_addr 当前正在执行的函数地址
 - callstack.call_site_addr 但钱函数的基本块的地址
-- callstack.stack_ptr 从当前函数开始的栈指针的值
+- callstack.stack_ptr 从当前函数的开始的栈指针的值
+- 
